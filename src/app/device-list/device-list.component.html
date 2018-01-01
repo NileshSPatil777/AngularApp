@@ -1,3 +1,23 @@
+<!--
 <p>
-  device-list works!
+  device-list works
+
 </p>
+
+<div>
+  <app-device-edit></app-device-edit>
+</div>
+-->
+<div class="row">
+  <div class="col-xs-10">
+    <app-device-edit></app-device-edit>
+    <hr>
+    <p>The device List</p>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor: pointer" *ngFor="let device of deviceInfo">
+        {{device.hostname}} ({{device.loopback}})
+      </a>
+
+    </ul>
+  </div>
+</div>
